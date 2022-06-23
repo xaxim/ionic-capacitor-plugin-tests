@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ionic-capacitor-plugin-tests</string>
+    <string name="title_activity_main">ionic-capacitor-plugin-tests</string>
+    <string name="package_name">br.bsb.carlos</string>
+    <string name="custom_url_scheme">br.bsb.carlos</string>
+</resources>

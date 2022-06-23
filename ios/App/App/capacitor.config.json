@@ -1,0 +1,6 @@
+{
+	"appId": "br.bsb.carlos",
+	"appName": "ionic-capacitor-plugin-tests",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
