@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>barcode</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="barcodeScan">
+    <ion-list>
+      <ion-item>
+        <ion-label>Text: {{barcodeScan.text}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Format: {{barcodeScan.format}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cancelled: {{barcodeScan.cancelled}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

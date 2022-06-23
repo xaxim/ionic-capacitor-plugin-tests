@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'material',
     loadChildren: () => import('./debug/material/material.module').then( m => m.MaterialPageModule)
   },
+  {
+    path: 'barcode',
+    loadChildren: () => import('./debug/barcode/barcode.module').then( m => m.BarcodePageModule)
+  },
 ];
 
 @NgModule({
