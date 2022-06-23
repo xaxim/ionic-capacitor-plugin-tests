@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-progress-bar type="indeterminate" *ngIf="isChecking"></ion-progress-bar>
+  <div *ngIf="isPushNotificationsAvailable">
+    <div *ngIf="token">
+      <h1>Token:</h1>
+      <p>{{token.value}}</p>
+    </div>
+    <h1>Push Notifications AVAILABLE</h1>
+    <div *ngIf="error">
+      <h1>Error:</h1>
+      <p>{{error}}</p>
+    </div>
+    <div *ngIf="notifications?.length > 0">
+      <h1>Notifications:</h1>
+      <ul>
+        <li *ngFor="let notification of notifications">
+          <p>Id: {{notification.id}}</p>
+          <p *ngIf="notification.title"><b>Title:</b> {{notification.title}}</p>
+          <p *ngIf="notification.subtitle"><b>Subtitle:</b> {{notification.subtitle}}</p>
+          <p *ngIf="notification.body"><b>Body:</b> {{notification.body}}</p>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="actionsPerformed?.length > 0">
+      <h1>Actions Performed:</h1>
+      <ul>
+        <li *ngFor="let action of actionsPerformed">
+          <p>Action ID: {{action.actionId}}</p>
+          <p>Notification ID: {{action.notification.id}}</p>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="deliveredNotificationList?.notifications?.length > 0">
+      <h1>Delivered Notifications:</h1>
+      <ul>
+        <li *ngFor="let notification of deliveredNotificationList.notifications">
+          <p>Id: {{notification.id}}</p>
+          <p *ngIf="notification.title"><b>Title:</b> {{notification.title}}</p>
+          <p *ngIf="notification.subtitle"><b>Subtitle:</b> {{notification.subtitle}}</p>
+          <p *ngIf="notification.body"><b>Body:</b> {{notification.body}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div *ngIf="!isPushNotificationsAvailable">
+    <h1>Push Notifications NOT AVAILABLE</h1>
+  </div>
+</ion-content>
