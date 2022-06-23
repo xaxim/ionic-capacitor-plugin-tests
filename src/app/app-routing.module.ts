@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'fontawesome',
     loadChildren: () => import('./debug/fontawesome/fontawesome.module').then( m => m.FontawesomePageModule)
   },
+  {
+    path: 'material',
+    loadChildren: () => import('./debug/material/material.module').then( m => m.MaterialPageModule)
+  },
 ];
 
 @NgModule({
