@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'notifications',
     loadChildren: () => import('./debug/notifications/notifications.module').then( m => m.NotificationsPageModule)
   },
+  {
+    path: 'fontawesome',
+    loadChildren: () => import('./debug/fontawesome/fontawesome.module').then( m => m.FontawesomePageModule)
+  },
 ];
 
 @NgModule({
