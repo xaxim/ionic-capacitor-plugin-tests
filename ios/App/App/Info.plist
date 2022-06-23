@@ -50,5 +50,11 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+  <key>NSCameraUsageDescription</key>
+	<string>We need access to the camera to test the plugins</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>We need access to the photo gallery to save photos taken</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to the photo gallery to select photos to use</string>
 </dict>
 </plist>

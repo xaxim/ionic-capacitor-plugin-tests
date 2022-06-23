@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'barcode',
     loadChildren: () => import('./debug/barcode/barcode.module').then( m => m.BarcodePageModule)
   },
+  {
+    path: 'filesharer',
+    loadChildren: () => import('./debug/filesharer/filesharer.module').then( m => m.FilesharerPageModule)
+  },
 ];
 
 @NgModule({
